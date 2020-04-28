@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Reinos</title>
+</head>
+<body>
+<h1>Reinos cadastrados</h1>
+
+    <table>
+        <tr th:each="reino: ${reinos}">
+        <td th:text="${reino.idReino}"> </td>
+        <td th:text="${reino.nomeReino}"> </td>
+</tr>
+</table>
+
+</body>
+</html>

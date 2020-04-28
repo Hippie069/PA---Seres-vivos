@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Comunidade</title>
+</head>
+<body>
+    <h1>
+        <form th:action="@{/home/comunidade}" method="POST">
+            <label> Nome</label><br>
+            <input type="text" name="nome"/>
+            <br><label>Cidade</label><br>
+            <input type="text" name="cidade"/>
+            <br><label>Espaço da Comunidade</label><br>
+            <input type="number" name="dimensaoEspaco"/>
+
+            <input type="submit" value="Cadastrar"/>
+        </form> 
+    </h1>
+    <h1>Comunidades disponíveis</h1>
+    <table>
+        <table>
+            <tr th:each="comunidade: ${comunidades}">
+                <td th:text="${comunidade.idComunidade}" />
+                <td th:text="${comunidade.nomeComunidade}" />
+                <td th:text="${comunidade.cidade}" />
+                <td th:text="${comunidade.dimensaoEspaco}" />
+    </table>    
+    </h1>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estado De Conservação</title>
+</head>
+<body>
+    <h1>Estados de Conservação Cadastrados</h1>
+        <table>
+            <tr th:each="estadoconservacao: ${estadosconservacao}">
+                <td th:text="${estadoconservacao.idEstadoConservacao}"></td>
+                <td th:text="${estadoconservacao.tipo}"></td>
+            </tr>
+
+        </table>
+</body>
+</html>

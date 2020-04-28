@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-DemoApplication<pa5_ib>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "br.facens.pa5_ib.DemoApplication",
+            "projectName": "pa5_ib",
+            "args": ""
+        }
+    ]
+}
