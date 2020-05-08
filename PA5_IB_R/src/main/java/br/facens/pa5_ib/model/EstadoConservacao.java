@@ -1,13 +1,35 @@
 package br.facens.pa5_ib.model;
 
-public class EstadoConservacao {
+import java.io.Serializable;
+import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+
+@Entity
+public class EstadoConservacao implements Serializable{
+
+    private static final long serialVersionUID = 1L;
+
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     int idEstadoConservacao;
     String tipo;
 
-    public EstadoConservacao(int idEstadoConservacao, String tipo){
-        this.idEstadoConservacao = idEstadoConservacao;
+    @OneToMany
+    @JoinColumn(name="ID_ECSER")
+    private List<SerVivo> servivo;
+
+    public EstadoConservacao(String tipo){
         this.tipo = tipo;
+    }
+
+    public EstadoConservacao(){
+
     }
 
     public void setIdEstadoConservacao(int idEstadoConservacao) {

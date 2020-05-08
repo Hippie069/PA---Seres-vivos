@@ -9,17 +9,21 @@ import br.facens.pa5_ib.repository.ComunidadeRepository;
 @Service
 public class ComunidadeService {
 
-@Autowired
-private ComunidadeRepository cr;
+    @Autowired
+    private ComunidadeRepository cr;
 
-public void addComunidade(Comunidade comunidade) {
-    cr.save(comunidade);
-}
+    public void addComunidade(Comunidade comunidade) {
+        cr.save(comunidade);
+    }
 
 
-public List<Comunidade> getTodasComunidades(){
- return cr.findAll();
-}
+    public List<Comunidade> getTodasComunidades(){
+        return cr.findAll();
+    }
+
+    public Comunidade getComunidadeById(int id) {
+        return cr.findById(id).get();
+    }
 
 
 }

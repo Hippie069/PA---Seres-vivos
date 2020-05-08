@@ -6,16 +6,34 @@
     <title>Ser Vivo</title>
 </head>
 <body>
+    <h1>Cadastro de Seres Vivos</h1>    
+    <a href="/">Menu</a>
+    <br>
+    <br>
     <h1>
-        <form th:action="@{/home/servivo}" method="POST">
+        <form th:action="@{/home/salvarservivo}" th:object="${servivo}" method="POST">
             <label>Nome</label><br>
-            <input type="text" name="nomeSerVivo"/>
+            <input type="text" name="nomeSerVivo" required/>
             <br><label>Especie</label><br>
-            <input type="text" name="Especie"/>
+            <input type="text" name="Especie" required/>
+           
             <br><label>Reino</label><br>
-            <input type="number" name="Reino" min="1" max="5"/>
+            
+            <select th:field="${servivo.reino}">
+                <option value="">Escolha o Reino</option>
+                <option th:each="reino:${reinos}" 
+                        th:value="${reino.idReino}" 
+                        th:text="${reino.nomeReino}"></option>
+            </select>
+
             <br><label>Estado de Conservação</label><br>
-            <input type="number" name="EstadoConservacao" min="1" max="7"/>
+
+            <select th:field="${servivo.estadoConservacao}">
+                <option value="">Qual o Estado de Conservação</option>
+                <option th:each="estadoconservacao:${estadosconservacao}" 
+                        th:value="${estadoconservacao.idEstadoConservacao}" 
+                        th:text="${estadoconservacao.tipo}"></option>
+            </select>
 
             <input type="submit" value="Cadastrar"/>
         </form>
@@ -27,9 +45,8 @@
                 <td th:text="${servivo.idSerVivo}" />
                 <td th:text="${servivo.nomeSerVivo}" />
                 <td th:text="${servivo.especie}" />
-                <td th:text="${servivo.reino}" />
-                <td th:text="${servivo.estadoConservacao}" />
-                
+                <td th:text="${servivo.reino.nomeReino}">
+                <td th:text="${servivo.estadoConservacao.tipo}" />
         </table>    
     </h1>    
 </body>

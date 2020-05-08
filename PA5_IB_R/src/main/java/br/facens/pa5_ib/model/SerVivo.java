@@ -1,18 +1,43 @@
 package br.facens.pa5_ib.model;
 
-import java.util.ArrayList;
+import java.io.Serializable;
+import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+@Entity
+public class SerVivo implements Serializable{
 
-public class SerVivo {
+    private static final long serialVersionUID = 1L;
+
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int idSerVivo;
     private String nomeSerVivo;
     private String especie;
-    private String estadoConservacao;
-    private String reino;
+
+    @ManyToOne
+    @JoinColumn(name="ID_ECSER")
+    private EstadoConservacao estadoConservacao;
+    
+    @ManyToOne
+    @JoinColumn(name="ID_REINOSER")
+    private Reino reino;
 
     @OneToMany
-    private ArrayList<Comunidade> comunidade;
+    @JoinColumn(name="ID_PARSER")
+    private List<Participa> participa;
+
+    @OneToMany
+    @JoinColumn(name="ID_COM")
+    private List<Comunidade> comunidade;
+
+    
 
     public int getIdSerVivo() {
         return idSerVivo;
@@ -38,27 +63,27 @@ public class SerVivo {
         this.especie = especie;
     }
 
-    public String getEstadoConservacao() {
+    public EstadoConservacao getEstadoConservacao() {
         return estadoConservacao;
     }
 
-    public void setEstadoConservacao(String estadoConservacao) {
+    public void setEstadoConservacao(EstadoConservacao estadoConservacao) {
         this.estadoConservacao = estadoConservacao;
     }
 
-    public String getReino() {
+    public Reino getReino() {
         return reino;
     }
 
-    public void setReino(String reino) {
+    public void setReino(Reino reino) {
         this.reino = reino;
     }
 
-    public ArrayList<Comunidade> getComunidade() {
+    public List<Comunidade> getComunidade() {
         return comunidade;
     }
 
-    public void setComunidade(ArrayList<Comunidade> IDComunidade) {
+    public void setComunidade(List<Comunidade> IDComunidade) {
         this.comunidade = IDComunidade;
     }
 
@@ -119,6 +144,14 @@ public class SerVivo {
     public String toString() {
         return "SerVivo{" + "IDSerVivo=" + idSerVivo + ", nomeSerVivo=" + nomeSerVivo + 
         ", Especie=" + especie + ", EstadoConservacao=" + estadoConservacao + 
-        ", IDReino=" + reino + ", IDComunidade=" + comunidade + '}';
+        ", IDReino=" + reino.getNomeReino() + ", IDComunidade=" + comunidade + '}';
+    }
+
+    public List<Participa> getParticipa() {
+        return participa;
+    }
+
+    public void setParticipa(List<Participa> participa) {
+        this.participa = participa;
     }
 }

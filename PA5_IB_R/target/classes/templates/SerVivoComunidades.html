@@ -6,6 +6,11 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>
+        <form th:action="@{/home/listacomunidade/} + ${idComunidade}" th:object="${comunidade}" method="GET">
+            
+        </form>
+    </h1>
     
-</body>
+   </body>
 </html>

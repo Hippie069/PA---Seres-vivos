@@ -17,7 +17,9 @@ public class ReinoController {
     @GetMapping("/reinos")
     public ModelAndView getReinos() {
         ModelAndView mv=new ModelAndView("reinoView");
-        
+
+        //rs.addReino();
+
         mv.addObject("reinos", rs.getReinos());
         return mv;
     }//getReinos

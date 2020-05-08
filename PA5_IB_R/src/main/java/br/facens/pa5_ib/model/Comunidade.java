@@ -1,20 +1,32 @@
 package br.facens.pa5_ib.model;
 
 import java.io.Serializable;
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Comunidade implements Serializable{
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int idComunidade;
     private String nomeComunidade;
     private double dimensaoEspaco;
+    
+    @OneToMany
+    @JoinColumn(name="ID_PARCOM")
+    private List<Participa> participa;
+
+    @OneToMany
+    @JoinColumn(name="ID_COM")
+    private List<SerVivo> serVivo;
 
     public int getIdComunidade() {
         return idComunidade;
@@ -32,7 +44,6 @@ public class Comunidade implements Serializable{
         this.nomeComunidade = nomeComunidade;
     }
 
-
     public double getDimensaoEspaco() {
         return dimensaoEspaco;
     }
@@ -45,7 +56,6 @@ public class Comunidade implements Serializable{
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + ((cidade == null) ? 0 : cidade.hashCode());
         long temp;
         temp = Double.doubleToLongBits(dimensaoEspaco);
         result = prime * result + (int) (temp ^ (temp >>> 32));
@@ -63,11 +73,6 @@ public class Comunidade implements Serializable{
         if (getClass() != obj.getClass())
             return false;
         Comunidade other = (Comunidade) obj;
-        if (cidade == null) {
-            if (other.cidade != null)
-                return false;
-        } else if (!cidade.equals(other.cidade))
-            return false;
         if (Double.doubleToLongBits(dimensaoEspaco) != Double.doubleToLongBits(other.dimensaoEspaco))
             return false;
         if (idComunidade != other.idComunidade)
@@ -82,9 +87,25 @@ public class Comunidade implements Serializable{
 
     @Override
     public String toString() {
-        return "Comunidade [cidade=" + cidade + ", dimensaoEspaco=" + dimensaoEspaco + ", idComunidade=" + idComunidade
-                + ", nomeComunidade=" + nomeComunidade + "]";
+        return "Comunidade [dimensaoEspaco=" + dimensaoEspaco + ", idComunidade=" + idComunidade + ", nomeComunidade="
+                + nomeComunidade + "]";
     }
 
-    
+    public List<Participa> getParticipa() {
+        return participa;
+    }
+
+    public void setParticipa(List<Participa> participa) {
+        this.participa = participa;
+    }
+
+    public List<SerVivo> getSerVivo() {
+        return serVivo;
+    }
+
+    public void setSerVivo(List<SerVivo> serVivo) {
+        this.serVivo = serVivo;
+    }
+
+      
 }

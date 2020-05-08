@@ -6,12 +6,14 @@
     <title>Cadastro Comunidade</title>
 </head>
 <body>
+    <h1>Cadastro de Comunidades</h1>    
+    <a href="/">Menu</a>
+    <br>
+    <br>
     <h1>
-        <form th:action="@{/home/comunidade}" method="POST">
+        <form th:action="@{/home/salvarcomunidade}"  method="POST">
             <label> Nome</label><br>
-            <input type="text" name="nome"/>
-            <br><label>Cidade</label><br>
-            <input type="text" name="cidade"/>
+            <input type="text" name="nomeComunidade"/>
             <br><label>Espaço da Comunidade</label><br>
             <input type="number" name="dimensaoEspaco"/>
 
@@ -24,7 +26,6 @@
             <tr th:each="comunidade: ${comunidades}">
                 <td th:text="${comunidade.idComunidade}" />
                 <td th:text="${comunidade.nomeComunidade}" />
-                <td th:text="${comunidade.cidade}" />
                 <td th:text="${comunidade.dimensaoEspaco}" />
     </table>    
     </h1>

@@ -20,7 +20,7 @@ public class EstadoConservacaoController{
     public ModelAndView getEstadoConservacao(){
          ModelAndView mv = new ModelAndView ("estadoConservacaoView");
 
-        mv.addObject("estadosconservacao", ecs.getEstadosConversavacao());
+        mv.addObject("estadosconservacao", ecs.getEstadoDeConservacao());
         return mv;
     }
 

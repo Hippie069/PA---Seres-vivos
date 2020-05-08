@@ -2,6 +2,7 @@ package br.facens.pa5_ib.service;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,21 +17,21 @@ public class EstadoConservacaoService
     @Autowired
     private EstadoConservacaoRepository ecr;
 
-    public EstadoConservacao getEstadoConservacaoById(Integer id){
-        return ecr.getEstadoConservacaoById(id);
+    public List<EstadoConservacao> getEstadoDeConservacao(){
+        if(ecr.count() == 0){
+            ecr.save(new EstadoConservacao("Extinta"));
+            ecr.save(new EstadoConservacao("Extinta na natureza"));
+            ecr.save(new EstadoConservacao("Criticamente em perigo"));
+            ecr.save(new EstadoConservacao("Em perigo"));
+            ecr.save(new EstadoConservacao("Vulnerável"));
+            ecr.save(new EstadoConservacao("Quase ameaçada"));
+            ecr.save(new EstadoConservacao("Pouco preocupante"));
+        }
+        return ecr.findAll();
     }
 
-    public ArrayList<EstadoConservacao> getEstadosConversavacao()
-    {
-        HashMap<Integer, EstadoConservacao> estadosConservacao = ecr.getEstadoConservacaos();
-        ArrayList<EstadoConservacao> ecRetornados = new ArrayList<EstadoConservacao>();
 
-        for(EstadoConservacao e:estadosConservacao.values())
-        {
-            ecRetornados.add(e);
-        }//for
-
-        return ecRetornados;
+    public EstadoConservacao getReinoById(Integer id) {
+        return ecr.findById(id).get();
     }
-
 }
