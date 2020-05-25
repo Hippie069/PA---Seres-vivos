@@ -29,10 +29,7 @@ public class SerVivo implements Serializable{
     @JoinColumn(name="ID_REINOSER")
     private Reino reino;
 
-    @OneToMany
-    @JoinColumn(name="ID_PARSER")
-    private List<Participa> participa;
-
+    
     @OneToMany
     @JoinColumn(name="ID_COM")
     private List<Comunidade> comunidade;
@@ -147,11 +144,4 @@ public class SerVivo implements Serializable{
         ", IDReino=" + reino.getNomeReino() + ", IDComunidade=" + comunidade + '}';
     }
 
-    public List<Participa> getParticipa() {
-        return participa;
-    }
-
-    public void setParticipa(List<Participa> participa) {
-        this.participa = participa;
-    }
 }

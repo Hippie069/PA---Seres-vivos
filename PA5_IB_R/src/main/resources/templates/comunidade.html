@@ -4,23 +4,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro Comunidade</title>
+    
+    <style>
+    		
+    	body{
+    		background-image:url(http://img.inforegion.pe.s3.amazonaws.com/wp-content/uploads/2015/04/pacaya-samiria-foto-andina.jpg);
+    		background-attachment: fixed;
+    	}	
+    
+    	.menu{
+    		background: -moz-linear-gradient(top, #87CEEB,#4682B4 70%);
+    		background:-webkit-linear-gradient(top, #87CEEB,#4682B4 70%);
+    		background:-o-linear-gradient(top, #87CEEB,#4682B4 70%);
+    		background:-ms-linear-gradient(top, #87CEEB,#4682B4 70%);
+    		background:linear-gradient(top, #87CEEB,#4682B4 70%);
+    		background-color:#87CEEB;
+    		padding:20px;
+    		width:440px;
+    		text-align:center;
+    		border:3px solid black;
+    		border-radius:30px;
+    		box-shadow: inset 0  0 10px #999 ;
+    		
+    		
+    	}
+    
+    
+    	h1, h2{	
+			font-size:30px;
+	    	color: black;
+	    	font-style: italic;
+	    	text-shadow: 0 0 0.2em #fff;
+    	}
+    
+    input{	
+    		width: 250px;
+   			height:30px;
+   			border:1px solid #ddd;
+   			border-radius:10px;
+    }
+    
+    #cadastro {
+  
+		   	 background: -webkit-linear-gradient(bottom, #E0E0E0, #F9F9F9 70%);
+		     background: -moz-linear-gradient(bottom, #E0E0E0, #F9F9F9 70%);
+		     background: -o-linear-gradient(bottom, #E0E0E0, #F9F9F9 70%);
+		     background: -ms-linear-gradient(bottom, #E0E0E0, #F9F9F9 70%);
+		     background: linear-gradient(bottom, #E0E0E0, #F9F9F9 70%);
+		     border: 1px solid #CCCCCE;
+		     border-radius: 10px;
+		     box-shadow: 0 3px 0 rgba(0, 0, 0, .3);   
+		     color: #616165;
+		     display: block;
+		     font-family: "Trebuchet MS";
+		     font-size: 14px;
+		     font-weight: bold;
+		     line-height: 25px;
+		     text-decoration: none;
+		     text-transform: uppercase;
+		     text-shadow:1px 1px 0 #FFF;
+		     padding: 5px 15px;
+		     position: relative;
+		     width: 150px;
+		     height:50px;
+		     text-align:center;
+		    
+     }
+     
+     #cadastro:before{
+     		border: 1px solid #FFF;
+		     border-radius: 10px;
+		     box-shadow: inset 0 -2px 12px -4px rgba(70, 70, 70, .2),
+		                   inset 0 3px 2px -1px rgba(255, 255, 255, 1);
+		     content: "";
+		     bottom: 0;
+		     left: 0;
+		     right: 0;
+		     top: 0;
+		     padding: 5px;
+		     position: absolute;
+    }
+ 
+    #cadastro:after{
+     	     background: rgba(255, 255, 255, .4);
+		     border-radius: 2px;
+		     content: "";
+		     bottom: 15px;
+		     left: 0px;
+		     right: 0px;
+		     top: 0px;
+		     position: absolute;
+    }
+
+	#cadastro:active{
+			 color: red;
+		     box-shadow: inset 0 0 7px rgba(0, 0, 0, .2);
+		     top: 4px;
+    }
+   	#cadastro:active:before{
+		     border: none;
+		     box-shadow:none;}
+    
+    </style>
 </head>
 <body>
+<center>
+  <main class="menu">
     <h1>Cadastro de Comunidades</h1>    
-    <a href="/">Menu</a>
+    <a href="/">Home</a>
     <br>
     <br>
-    <h1>
+    
         <form th:action="@{/home/salvarcomunidade}"  method="POST">
-            <label> Nome</label><br>
-            <input type="text" name="nomeComunidade"/>
-            <br><label>Espaço da Comunidade</label><br>
-            <input type="number" name="dimensaoEspaco"/>
+            
+            <input type="text" name="nomeComunidade" placeholder="Nome" autofocus/>
+            
+            <br><br>
+            <input type="number" name="dimensaoEspaco" placeholder="Espaço da Comunidade"/>	
+            <Br><Br>
 
-            <input type="submit" value="Cadastrar"/>
+            <center><input type="submit" id="cadastro" value="Cadastrar"/></center>
         </form> 
-    </h1>
-    <h1>Comunidades disponíveis</h1>
+
+    
+    <br>
+    
+    <h2>Comunidades disponíveis</h1>
     <table>
         <table>
             <tr th:each="comunidade: ${comunidades}">
@@ -28,6 +137,7 @@
                 <td th:text="${comunidade.nomeComunidade}" />
                 <td th:text="${comunidade.dimensaoEspaco}" />
     </table>    
-    </h1>
+  </main>
+ </center> 
 </body>
 </html>

@@ -4,20 +4,145 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ser Vivo</title>
+    
+    <style>
+    
+    	body{
+    		background-image:url(http://conexaoplaneta.com.br/wp-content/uploads/2016/03/MAF_2010-01_Mamiraua_0245.jpg);
+    		background-attachment: fixed;
+    		background-size: 100%;
+    		
+    		
+    	}
+    
+    	.menu {
+    		width: 440px;
+    		text-align: center;
+    		background-color:#C8F6D0;
+    		border: 1px solid black;
+    		box-shadow: inset 0  0 5px #999 ;
+    		margin-top:80px;
+    		padding:4px;
+    		color: black;
+    		border-radius: 30px;
+    		/*#D4F2D9*/
+    	}
+
+    	h1,h2{
+    	font-size:30px;
+    	color: black;
+    	font-style: italic;
+    	text-shadow: 0 0 0.2em #fff;
+    	}
+    	
+  	
+    	
+    	#cadastro {
+  
+		   	 background: -webkit-linear-gradient(bottom, #E0E0E0, #F9F9F9 70%);
+		     background: -moz-linear-gradient(bottom, #E0E0E0, #F9F9F9 70%);
+		     background: -o-linear-gradient(bottom, #E0E0E0, #F9F9F9 70%);
+		     background: -ms-linear-gradient(bottom, #E0E0E0, #F9F9F9 70%);
+		     background: linear-gradient(bottom, #E0E0E0, #F9F9F9 70%);
+		     border: 1px solid #CCCCCE;
+		     border-radius: 10px;
+		     box-shadow: 0 3px 0 rgba(0, 0, 0, .3);   
+		     color: #616165;
+		     display: block;
+		     font-family: "Trebuchet MS";
+		     font-size: 14px;
+		     font-weight: bold;
+		     line-height: 25px;
+		     text-decoration: none;
+		     text-transform: uppercase;
+		     text-shadow:1px 1px 0 #FFF;
+		     padding: 5px 15px;
+		     position: relative;
+		     width: 150px;
+		     height:50px;
+		     text-align:center;
+		    
+     }
+     
+     #cadastro:before{
+     		border: 1px solid #FFF;
+		     border-radius: 10px;
+		     box-shadow: inset 0 -2px 12px -4px rgba(70, 70, 70, .2),
+		                   inset 0 3px 2px -1px rgba(255, 255, 255, 1);
+		     content: "";
+		     bottom: 0;
+		     left: 0;
+		     right: 0;
+		     top: 0;
+		     padding: 5px;
+		     position: absolute;
+    }
+ 
+    #cadastro:after{
+     	     background: rgba(255, 255, 255, .4);
+		     border-radius: 2px;
+		     content: "";
+		     bottom: 15px;
+		     left: 0px;
+		     right: 0px;
+		     top: 0px;
+		     position: absolute;
+    }
+
+	#cadastro:active{
+			 color: red;
+		     box-shadow: inset 0 0 7px rgba(0, 0, 0, .2);
+		     top: 4px;
+    }
+   	#cadastro:active:before{
+		     border: none;
+		     box-shadow:none;
+    }
+
+    	select{
+    	  	 -webkit-appearance: none;  
+			 -moz-appearance: none;
+			 appearance: none; 
+			 background: url(http://www.webcis.com.br/images/imagens-noticias/select/ico-seta-appearance.gif) no-repeat #eeeeee;  /* Imagem de fundo (Seta) */
+			 background-position: 218px center;  
+			 width: 250px;
+			 height:30px;
+			 border:1px solid #ddd;
+			 border-radius:10px;
+   
+   }
+ 
+ 
+   		input{
+   			width: 250px;
+   			height:30px;
+   			border:1px solid #ddd;
+   			border-radius:10px;
+   		}
+   		
+   		#add{
+   			text-align:center;
+   		}
+    
+    </style>
 </head>
 <body>
-    <h1>Cadastro de Seres Vivos</h1>    
-    <a href="/">Menu</a>
-    <br>
-    <br>
-    <h1>
+<center>
+  <main class = "menu">
+  		
+	    <h1>Cadastro de Seres Vivos</h1>    
+	    <a href="/">Home</a>
+	    <br>
+	    <br>
+	    
+       
         <form th:action="@{/home/salvarservivo}" th:object="${servivo}" method="POST">
-            <label>Nome</label><br>
-            <input type="text" name="nomeSerVivo" required/>
-            <br><label>Especie</label><br>
-            <input type="text" name="Especie" required/>
            
-            <br><label>Reino</label><br>
+            <input type="text" name="nomeSerVivo" required autofocus placeholder="Ensira o Nome aqui:"/>
+            <br><br>
+            <input type="text" name="Especie" required placeholder="Ensira a espécie aqui:"/>
+         
+         	<Br><BR>
             
             <select th:field="${servivo.reino}">
                 <option value="">Escolha o Reino</option>
@@ -26,7 +151,8 @@
                         th:text="${reino.nomeReino}"></option>
             </select>
 
-            <br><label>Estado de Conservação</label><br>
+			<Br>
+		     <Br>     
 
             <select th:field="${servivo.estadoConservacao}">
                 <option value="">Qual o Estado de Conservação</option>
@@ -34,20 +160,29 @@
                         th:value="${estadoconservacao.idEstadoConservacao}" 
                         th:text="${estadoconservacao.tipo}"></option>
             </select>
-
-            <input type="submit" value="Cadastrar"/>
+				<Br><Br>
+            <center><input type="submit" id="cadastro" value="Cadastrar"/></center>
         </form>
-    </h1>
-    <h1>Seres Vivos Cadastrados</h1>
-    <table>
-        <table>
+
+    <h2>Seres Vivos Cadastrados</h2>
+    
+        <table id="add">
+<tr>
+   <th>ID</th>
+        <th>Nome</th>
+        <th>Espécie</th>
+        <th>Reino</th>
+        <th>Estado de conservação</th>
+        
             <tr th:each="servivo: ${seresvivos}">
                 <td th:text="${servivo.idSerVivo}" />
                 <td th:text="${servivo.nomeSerVivo}" />
                 <td th:text="${servivo.especie}" />
                 <td th:text="${servivo.reino.nomeReino}">
                 <td th:text="${servivo.estadoConservacao.tipo}" />
-        </table>    
-    </h1>    
+                
+        </table>     
+    </main>  
+    </center> 
 </body>
 </html>

@@ -1,17 +1,89 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Home</title>
+	<meta charset="ISO-8859-1">
+	<title>Home</title>
+	
+	<style>
+	
+	.menu{
+    		background: -moz-linear-gradient(top, #fff, #836FFF 60%);
+    		background:-webkit-linear-gradient(top, #fff, 	#836FFF 60%);
+    		background:-o-linear-gradient(top, #fff, 	#836FFF 60%);
+    		background:-ms-linear-gradient(top, #fff, 	 	#836FFF 60%);
+    		background:linear-gradient(top, #32CD32,  	#836FFF 60%);
+    		background-color:#fff;
+    		padding:20px;
+    		width:900px;
+    		height: 440px;
+    		text-align:center;
+    		border:3px solid black;
+    		border-radius:30px;
+    		box-shadow: inset 0  0 10px #999 ;
+    		
+    		}
+	 
+	 	
+	 	h1{
+	 		margin-top:10px;
+	 	    font-size:60px;
+	    	color:black;
+	    	font-style: italic;
+	    	
+	    	
+	 	}
+	 
+	 nav ul{
+	 	margin:0;
+	 	padding:0;
+	 }
+	
+	nav ul li{
+		list-style-type: none;
+		display:inline;
+	}
+	
+	nav ul li a{
+		padding: 10px 30px;
+		text-decoration: none;
+		background-color:#4682B4;
+		color:#fff;
+		display:inline-block;
+		margin-right:-3px;
+		border:1px solid green;
+		border-radius:5px;
+	}
+		
+	nav ul li a:hover{
+		background-color: 	#00008B;
+	}	
+	</style>
+	
 </head>
-<body>
-<h1>Menu</h1>
-<p>Cadastros</p>
-<a href="/home/servivo"> Cadastrar Ser Vivo</a>
-<a href="/home/comunidade"> Cadastrar Comunidade</a>
-<p>Listas</p>
-<a href="/home/reinos"> Reinos</a>
-<a href="/home/estadosconservacao"> Estados de Conservacao</a>
 
+<body>
+<center>
+	
+	
+	<main class="menu">
+	
+		<center><h1>Menu</h1></center>
+		
+		<nav>
+			<ul>	
+			     <li>
+					 <ul>
+						<li><a href="/home/servivo"> Cadastrar Ser Vivo</a></li>
+						<li><a href="/home/comunidade"> Cadastrar Comunidade</a></li>
+				  
+						<li><a href="/home/reinos"> Reinos</a></li>
+						<li><a href="/home/estadosconservacao"> Estados de Conservacao</a></li>
+					  </ul>	
+					</li> 
+			 	 
+			</ul>
+		</nav>
+	</main>
+</center>
 </body>
 </html>
