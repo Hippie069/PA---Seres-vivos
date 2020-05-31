@@ -3,14 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ser Vivo para Comunidade</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
-    <h1>
-        <form th:action="@{/home/listacomunidade/} + ${idComunidade}" th:object="${comunidade}" method="GET">
-            
-        </form>
-    </h1>
-    
-   </body>
+    <h1>Detalhes da Comunidade</h1>
+    <a href="/">Menu</a>
+    <a href="/home/servivo">Voltar</a>
+    <br>
+    <br>
+    <b>Id: </b> <span th:text="${comunidade.idComunidade}"></span>
+    <br><b>Nome: </b> <span th:text="${comunidade.nomeComunidade}"></span>
+    <br><b>Dimensão: </b> <span th:text="${comunidade.dimensaoEspaco}"></span>
+
+    <br>
+    <br>
+    <h1>Seres vivos da comunidade:</h1>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Especie</th>
+            <th>Reino</th>
+            <th>Estado de Conservação</th>
+        </tr>
+       
+        <tr th:each="servivo : ${comunidade.serVivo}">
+            <td th:text="${servivo.idSerVivo}" >
+            <td th:text="${servivo.nomeSerVivo}" >
+            <td th:text="${servivo.especie}" >
+            <td th:text="${servivo.reino.nomeReino}">
+            <td th:text="${servivo.estadoConservacao.tipo}" >
+        </tr>
+    </table>
+    <br>
+    <br>
+    <form th:action="@{/home/associarservivo(id=${comunidade.idComunidade})}" method="POST">
+        <label><b>Seres Vivos:</b></label>
+        <select name="id" required>
+            <option value="">Escolha o Ser Vivo</option>
+            <option th:each="servivo : ${serVivo}"
+                        th:value="${servivo.idSerVivo}"
+                        th:text="${servivo.nomeSerVivo}">
+            </option>
+        </select>
+        <input type="submit" value="Associar" />
+    </form>
+
+
+</body>
 </html>

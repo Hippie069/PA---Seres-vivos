@@ -8,7 +8,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany; 
+import javax.persistence.UniqueConstraint;
 
 @Entity
 public class Comunidade implements Serializable{
@@ -19,13 +21,14 @@ public class Comunidade implements Serializable{
     private int idComunidade;
     private String nomeComunidade;
     private double dimensaoEspaco;
-    
-    @OneToMany
-    @JoinColumn(name="ID_PARCOM")
-    private List<Participa> participa;
 
-    @OneToMany
-    @JoinColumn(name="ID_COM")
+    @ManyToMany
+    @JoinTable(
+        name="Comunidade_Animal",
+        uniqueConstraints = @UniqueConstraint(columnNames = { "id_comunidade", "id_servivo" }),
+        joinColumns        = @JoinColumn(name = "id_comunidade" ),
+        inverseJoinColumns = @JoinColumn(name = "id_servivo")
+    )
     private List<SerVivo> serVivo;
 
     public int getIdComunidade() {
@@ -89,14 +92,6 @@ public class Comunidade implements Serializable{
     public String toString() {
         return "Comunidade [dimensaoEspaco=" + dimensaoEspaco + ", idComunidade=" + idComunidade + ", nomeComunidade="
                 + nomeComunidade + "]";
-    }
-
-    public List<Participa> getParticipa() {
-        return participa;
-    }
-
-    public void setParticipa(List<Participa> participa) {
-        this.participa = participa;
     }
 
     public List<SerVivo> getSerVivo() {

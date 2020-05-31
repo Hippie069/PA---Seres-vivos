@@ -8,8 +8,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+import javax.persistence.UniqueConstraint;
 @Entity
 public class SerVivo implements Serializable{
 
@@ -30,8 +32,13 @@ public class SerVivo implements Serializable{
     private Reino reino;
 
     
-    @OneToMany
-    @JoinColumn(name="ID_COM")
+    @ManyToMany
+    @JoinTable(
+        name="Comunidade_Animal",
+        uniqueConstraints = @UniqueConstraint(columnNames = { "id_comunidade", "id_servivo" }),
+        joinColumns        = @JoinColumn(name = "id_servivo" ),
+        inverseJoinColumns = @JoinColumn(name = "id_comunidade")
+    )
     private List<Comunidade> comunidade;
 
     

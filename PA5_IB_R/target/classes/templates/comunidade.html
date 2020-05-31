@@ -135,7 +135,8 @@
             <tr th:each="comunidade: ${comunidades}">
                 <td th:text="${comunidade.idComunidade}" />
                 <td th:text="${comunidade.nomeComunidade}" />
-                <td th:text="${comunidade.dimensaoEspaco}" />
+				<td th:text="${comunidade.dimensaoEspaco}" />
+				<td> <a th:href="@{'/home/associar/' + ${comunidade.idComunidade}}">Detalhes</a></td>
     </table>    
   </main>
  </center> 
