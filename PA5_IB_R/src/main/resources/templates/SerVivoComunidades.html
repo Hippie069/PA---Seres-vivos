@@ -15,7 +15,7 @@
 <body>
     <h1>Detalhes da Comunidade</h1>
     <a href="/">Menu</a>
-    <a href="/home/servivo">Voltar</a>
+    <a href="/home/comunidade">Voltar</a>
     <br>
     <br>
     <b>Id: </b> <span th:text="${comunidade.idComunidade}"></span>
@@ -41,10 +41,13 @@
             <td th:text="${servivo.reino.nomeReino}">
             <td th:text="${servivo.estadoConservacao.tipo}" >
         </tr>
+        <tr>
+
+        </tr>
     </table>
     <br>
     <br>
-    <form th:action="@{/home/associarservivo(id=${comunidade.idComunidade})}" method="POST">
+    <form th:action="@{/home/associarservivo(cod=${comunidade.idComunidade})}" method="POST">
         <label><b>Seres Vivos:</b></label>
         <select name="id" required>
             <option value="">Escolha o Ser Vivo</option>
@@ -53,6 +56,7 @@
                         th:text="${servivo.nomeSerVivo}">
             </option>
         </select>
+
         <input type="submit" value="Associar" />
     </form>
 

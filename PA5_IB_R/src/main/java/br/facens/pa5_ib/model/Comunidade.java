@@ -101,6 +101,5 @@ public class Comunidade implements Serializable{
     public void setSerVivo(List<SerVivo> serVivo) {
         this.serVivo = serVivo;
     }
-
       
 }

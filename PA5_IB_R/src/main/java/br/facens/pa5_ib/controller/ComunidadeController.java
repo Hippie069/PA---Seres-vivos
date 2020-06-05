@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+import javax.servlet.http.HttpServletRequest;
 
 import br.facens.pa5_ib.model.Comunidade;
 import br.facens.pa5_ib.model.SerVivo;
@@ -57,17 +58,15 @@ public class ComunidadeController {
     }
 
     @PostMapping("/associarservivo")
-    public String associarComunidade(@ModelAttribute SerVivo serVivo, @RequestParam Integer id) {
-        
+    public String associarComunidade(HttpServletRequest req , @RequestParam Integer cod) {
 
-        Comunidade comunidade = cr.getComunidadeById(id);
-        serVivo = svs.getSerVivoById(serVivo.getIdSerVivo());
-        
+        Comunidade comunidade = cr.getComunidadeById(cod);
+        SerVivo servivo = svs.getSerVivoById(Integer.parseInt(req.getParameter("id")));
 
-        comunidade.getSerVivo().add(serVivo);
+        comunidade.getSerVivo().add(servivo);
         cr.addComunidade(comunidade);
 
-        return "redirect:/home/associar/" + id;
+        return "redirect:/home/associar/" + cod;
     }
 
 }

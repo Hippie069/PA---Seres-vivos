@@ -10,15 +10,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
-
 import br.facens.pa5_ib.model.Comunidade;
 import br.facens.pa5_ib.model.SerVivo;
 import br.facens.pa5_ib.service.ComunidadeService;
 import br.facens.pa5_ib.service.EstadoConservacaoService;
 import br.facens.pa5_ib.service.ReinoService;
 import br.facens.pa5_ib.service.SerVivoService;
-import javassist.compiler.ast.Variable;
 
 @Controller
 @RequestMapping("/home")
