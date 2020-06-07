@@ -30,6 +30,8 @@ public class Comunidade implements Serializable{
         inverseJoinColumns = @JoinColumn(name = "id_servivo")
     )
     private List<SerVivo> serVivo;
+    private double iShannon;
+
 
     public int getIdComunidade() {
         return idComunidade;
@@ -100,6 +102,14 @@ public class Comunidade implements Serializable{
 
     public void setSerVivo(List<SerVivo> serVivo) {
         this.serVivo = serVivo;
+    }
+
+    public double getiShannon() {
+        return iShannon;
+    }
+
+    public void setiShannon(double iShannon) {
+        this.iShannon = iShannon;
     }
       
 }

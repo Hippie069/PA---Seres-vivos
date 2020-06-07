@@ -69,4 +69,11 @@ public class ComunidadeController {
         return "redirect:/home/associar/" + cod;
     }
 
+    @GetMapping("/calcular/{codigo}")
+    public String calcular(@PathVariable (name="codigo") Integer codigo)
+    {  
+        cr.calcIndiceShannon(codigo);
+        return "redirect:/home/associar/" + codigo;
+    }
+
 }
