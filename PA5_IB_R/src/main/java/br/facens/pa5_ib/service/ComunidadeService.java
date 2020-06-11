@@ -25,7 +25,7 @@ public class ComunidadeService {
         return cr.findById(id).get();
     }
 
-    public void calcIndiceShannon(int codigo){
+    public double calcIndiceShannon(int codigo){
 
         double ni;//nesse exemplo, será considerado que cada espécie tem o msm número de individuos
         int S;//numero de espécies
@@ -44,6 +44,7 @@ public class ComunidadeService {
 
         H = Pi + Math.log(Pi);
 
+        return H;
     }
 
 

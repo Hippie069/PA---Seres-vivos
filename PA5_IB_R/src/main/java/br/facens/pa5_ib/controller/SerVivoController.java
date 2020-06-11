@@ -57,6 +57,7 @@ public class SerVivoController {
         SerVivo serVivo = svs.getSerVivoById(id);
         List<Comunidade> comunidade = cs.getTodasComunidades();
 
+
         mv.addObject("servivo", serVivo);
         mv.addObject("comunidades", comunidade);
 

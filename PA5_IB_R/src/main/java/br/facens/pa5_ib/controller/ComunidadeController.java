@@ -50,9 +50,14 @@ public class ComunidadeController {
         ModelAndView mv = new ModelAndView("SerVivoComunidades");
         Comunidade comunidade = cr.getComunidadeById(id);
         List<SerVivo> serVivo = svs.getSeresVivos();
+ 
+
+        serVivo.removeAll(comunidade.getSerVivo());
 
         mv.addObject("comunidade", comunidade);        
         mv.addObject("serVivo", serVivo);
+
+        comunidade.setiShannon(cr.calcIndiceShannon(id));
 
         return mv;
     }
@@ -69,11 +74,11 @@ public class ComunidadeController {
         return "redirect:/home/associar/" + cod;
     }
 
-    @GetMapping("/calcular/{codigo}")
+    /*@GetMapping("/calcular/{codigo}")
     public String calcular(@PathVariable (name="codigo") Integer codigo)
     {  
         cr.calcIndiceShannon(codigo);
         return "redirect:/home/associar/" + codigo;
-    }
+    }*/
 
 }
