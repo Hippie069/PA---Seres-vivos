@@ -31,7 +31,7 @@ public class ComunidadeService {
         int S;//numero de espécies
         double N;//Numero total de individuos
         double Pi;
-        double H = 1.0;
+        double H = 0.0;
 
         cr.findById(codigo).get().setiShannon(H);
 
@@ -42,7 +42,7 @@ public class ComunidadeService {
 
         Pi = ni/N;
 
-        H = Pi + Math.log(Pi);
+        H = - Pi * Math.log(Pi);
 
         return H;
     }

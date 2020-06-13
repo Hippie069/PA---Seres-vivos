@@ -1,20 +1,20 @@
 ----------------------------------------------------------------
-Wed Jun 10 22:25:25 BRT 2020:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0172-a0fb-54fe-00000f34d200 
-on database directory D:\Users\lucas\Desktop\Arquivos\PA---Seres-vivos\PA5_IB_R\dbprojeto with class loader sun.misc.Launcher$AppClassLoader@764c12b6 
-Loaded from file:/C:/Users/lucas/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+Fri Jun 12 23:04:11 BRT 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0172-ab6b-8983-0000124c1f10 
+on database directory C:\Users\foste\Desktop\paa\PA---Seres-vivos\PA5_IB_R\dbprojeto with class loader sun.misc.Launcher$AppClassLoader@764c12b6 
+Loaded from file:/C:/Users/foste/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
 java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_231-b11
-user.dir=d:\Users\lucas\Desktop\Arquivos\PA---Seres-vivos\PA5_IB_R
+java.runtime.version=1.8.0_221-b11
+user.dir=c:\Users\foste\Desktop\paa\PA---Seres-vivos\PA5_IB_R
 os.name=Windows 10
 os.arch=amd64
 os.version=10.0
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
 ----------------------------------------------------------------
-Wed Jun 10 22:26:49 BRT 2020:
-Shutting down instance a816c00e-0172-a0fb-54fe-00000f34d200 on database directory D:\Users\lucas\Desktop\Arquivos\PA---Seres-vivos\PA5_IB_R\dbprojeto with class loader sun.misc.Launcher$AppClassLoader@764c12b6 
-Wed Jun 10 22:26:49 BRT 2020 Thread[Thread-21,5,main] Cleanup action starting
+Fri Jun 12 23:11:14 BRT 2020:
+Shutting down instance a816c00e-0172-ab6b-8983-0000124c1f10 on database directory C:\Users\foste\Desktop\paa\PA---Seres-vivos\PA5_IB_R\dbprojeto with class loader sun.misc.Launcher$AppClassLoader@764c12b6 
+Fri Jun 12 23:11:15 BRT 2020 Thread[Thread-21,5,main] Cleanup action starting
 ERROR XBM0I: Directory dbprojeto cannot be removed.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
@@ -34,7 +34,7 @@ ERROR XBM0I: Directory dbprojeto cannot be removed.
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 Cleanup action completed
-Wed Jun 10 22:26:49 BRT 2020 Thread[Thread-21,5,main] Cleanup action starting
+Fri Jun 12 23:11:15 BRT 2020 Thread[Thread-21,5,main] Cleanup action starting
 ERROR XBM0I: Directory dbprojeto cannot be removed.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
@@ -55,22 +55,22 @@ ERROR XBM0I: Directory dbprojeto cannot be removed.
 	at java.lang.Thread.run(Thread.java:748)
 Cleanup action completed
 ----------------------------------------------------------------
-Wed Jun 10 22:26:51 BRT 2020:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance 19ba803c-0172-a0fb-54fe-00000f34d200 
-on database directory D:\Users\lucas\Desktop\Arquivos\PA---Seres-vivos\PA5_IB_R\dbprojeto with class loader sun.misc.Launcher$AppClassLoader@764c12b6 
-Loaded from file:/C:/Users/lucas/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+Fri Jun 12 23:11:15 BRT 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance 020e0090-0172-ab6b-8983-0000124c1f10 
+on database directory C:\Users\foste\Desktop\paa\PA---Seres-vivos\PA5_IB_R\dbprojeto with class loader sun.misc.Launcher$AppClassLoader@764c12b6 
+Loaded from file:/C:/Users/foste/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
 java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_231-b11
-user.dir=d:\Users\lucas\Desktop\Arquivos\PA---Seres-vivos\PA5_IB_R
+java.runtime.version=1.8.0_221-b11
+user.dir=c:\Users\foste\Desktop\paa\PA---Seres-vivos\PA5_IB_R
 os.name=Windows 10
 os.arch=amd64
 os.version=10.0
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
 ----------------------------------------------------------------
-Wed Jun 10 22:27:20 BRT 2020:
-Shutting down instance 19ba803c-0172-a0fb-54fe-00000f34d200 on database directory D:\Users\lucas\Desktop\Arquivos\PA---Seres-vivos\PA5_IB_R\dbprojeto with class loader sun.misc.Launcher$AppClassLoader@764c12b6 
-Wed Jun 10 22:27:21 BRT 2020 Thread[Thread-37,5,main] Cleanup action starting
+Fri Jun 12 23:11:56 BRT 2020:
+Shutting down instance 020e0090-0172-ab6b-8983-0000124c1f10 on database directory C:\Users\foste\Desktop\paa\PA---Seres-vivos\PA5_IB_R\dbprojeto with class loader sun.misc.Launcher$AppClassLoader@764c12b6 
+Fri Jun 12 23:11:56 BRT 2020 Thread[Thread-37,5,main] Cleanup action starting
 ERROR XBM0I: Directory dbprojeto cannot be removed.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
@@ -90,7 +90,7 @@ ERROR XBM0I: Directory dbprojeto cannot be removed.
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 Cleanup action completed
-Wed Jun 10 22:27:21 BRT 2020 Thread[Thread-37,5,main] Cleanup action starting
+Fri Jun 12 23:11:56 BRT 2020 Thread[Thread-37,5,main] Cleanup action starting
 ERROR XBM0I: Directory dbprojeto cannot be removed.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
@@ -111,22 +111,22 @@ ERROR XBM0I: Directory dbprojeto cannot be removed.
 	at java.lang.Thread.run(Thread.java:748)
 Cleanup action completed
 ----------------------------------------------------------------
-Wed Jun 10 22:27:22 BRT 2020:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance cbe9405a-0172-a0fb-54fe-00000f34d200 
-on database directory D:\Users\lucas\Desktop\Arquivos\PA---Seres-vivos\PA5_IB_R\dbprojeto with class loader sun.misc.Launcher$AppClassLoader@764c12b6 
-Loaded from file:/C:/Users/lucas/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+Fri Jun 12 23:11:57 BRT 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance 89e800c0-0172-ab6b-8983-0000124c1f10 
+on database directory C:\Users\foste\Desktop\paa\PA---Seres-vivos\PA5_IB_R\dbprojeto with class loader sun.misc.Launcher$AppClassLoader@764c12b6 
+Loaded from file:/C:/Users/foste/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
 java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_231-b11
-user.dir=d:\Users\lucas\Desktop\Arquivos\PA---Seres-vivos\PA5_IB_R
+java.runtime.version=1.8.0_221-b11
+user.dir=c:\Users\foste\Desktop\paa\PA---Seres-vivos\PA5_IB_R
 os.name=Windows 10
 os.arch=amd64
 os.version=10.0
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
 ----------------------------------------------------------------
-Wed Jun 10 22:27:37 BRT 2020:
-Shutting down instance cbe9405a-0172-a0fb-54fe-00000f34d200 on database directory D:\Users\lucas\Desktop\Arquivos\PA---Seres-vivos\PA5_IB_R\dbprojeto with class loader sun.misc.Launcher$AppClassLoader@764c12b6 
-Wed Jun 10 22:27:37 BRT 2020 Thread[Thread-53,5,main] Cleanup action starting
+Fri Jun 12 23:13:43 BRT 2020:
+Shutting down instance 89e800c0-0172-ab6b-8983-0000124c1f10 on database directory C:\Users\foste\Desktop\paa\PA---Seres-vivos\PA5_IB_R\dbprojeto with class loader sun.misc.Launcher$AppClassLoader@764c12b6 
+Fri Jun 12 23:13:43 BRT 2020 Thread[Thread-53,5,main] Cleanup action starting
 ERROR XBM0I: Directory dbprojeto cannot be removed.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
@@ -146,7 +146,7 @@ ERROR XBM0I: Directory dbprojeto cannot be removed.
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 Cleanup action completed
-Wed Jun 10 22:27:37 BRT 2020 Thread[Thread-53,5,main] Cleanup action starting
+Fri Jun 12 23:13:43 BRT 2020 Thread[Thread-53,5,main] Cleanup action starting
 ERROR XBM0I: Directory dbprojeto cannot be removed.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
@@ -167,22 +167,22 @@ ERROR XBM0I: Directory dbprojeto cannot be removed.
 	at java.lang.Thread.run(Thread.java:748)
 Cleanup action completed
 ----------------------------------------------------------------
-Wed Jun 10 22:27:38 BRT 2020:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance bef90078-0172-a0fb-54fe-00000f34d200 
-on database directory D:\Users\lucas\Desktop\Arquivos\PA---Seres-vivos\PA5_IB_R\dbprojeto with class loader sun.misc.Launcher$AppClassLoader@764c12b6 
-Loaded from file:/C:/Users/lucas/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+Fri Jun 12 23:13:44 BRT 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance e7610138-0172-ab6b-8983-0000124c1f10 
+on database directory C:\Users\foste\Desktop\paa\PA---Seres-vivos\PA5_IB_R\dbprojeto with class loader sun.misc.Launcher$AppClassLoader@764c12b6 
+Loaded from file:/C:/Users/foste/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
 java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_231-b11
-user.dir=d:\Users\lucas\Desktop\Arquivos\PA---Seres-vivos\PA5_IB_R
+java.runtime.version=1.8.0_221-b11
+user.dir=c:\Users\foste\Desktop\paa\PA---Seres-vivos\PA5_IB_R
 os.name=Windows 10
 os.arch=amd64
 os.version=10.0
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
 ----------------------------------------------------------------
-Wed Jun 10 22:30:33 BRT 2020:
-Shutting down instance bef90078-0172-a0fb-54fe-00000f34d200 on database directory D:\Users\lucas\Desktop\Arquivos\PA---Seres-vivos\PA5_IB_R\dbprojeto with class loader sun.misc.Launcher$AppClassLoader@764c12b6 
-Wed Jun 10 22:30:34 BRT 2020 Thread[Thread-69,5,main] Cleanup action starting
+Fri Jun 12 23:14:01 BRT 2020:
+Shutting down instance e7610138-0172-ab6b-8983-0000124c1f10 on database directory C:\Users\foste\Desktop\paa\PA---Seres-vivos\PA5_IB_R\dbprojeto with class loader sun.misc.Launcher$AppClassLoader@764c12b6 
+Fri Jun 12 23:14:02 BRT 2020 Thread[Thread-69,5,main] Cleanup action starting
 ERROR XBM0I: Directory dbprojeto cannot be removed.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
@@ -202,7 +202,7 @@ ERROR XBM0I: Directory dbprojeto cannot be removed.
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 Cleanup action completed
-Wed Jun 10 22:30:34 BRT 2020 Thread[Thread-69,5,main] Cleanup action starting
+Fri Jun 12 23:14:02 BRT 2020 Thread[Thread-69,5,main] Cleanup action starting
 ERROR XBM0I: Directory dbprojeto cannot be removed.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
@@ -223,125 +223,13 @@ ERROR XBM0I: Directory dbprojeto cannot be removed.
 	at java.lang.Thread.run(Thread.java:748)
 Cleanup action completed
 ----------------------------------------------------------------
-Wed Jun 10 22:30:35 BRT 2020:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance f9f140e7-0172-a0fb-54fe-00000f34d200 
-on database directory D:\Users\lucas\Desktop\Arquivos\PA---Seres-vivos\PA5_IB_R\dbprojeto with class loader sun.misc.Launcher$AppClassLoader@764c12b6 
-Loaded from file:/C:/Users/lucas/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+Fri Jun 12 23:14:03 BRT 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a0f1c156-0172-ab6b-8983-0000124c1f10 
+on database directory C:\Users\foste\Desktop\paa\PA---Seres-vivos\PA5_IB_R\dbprojeto with class loader sun.misc.Launcher$AppClassLoader@764c12b6 
+Loaded from file:/C:/Users/foste/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
 java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_231-b11
-user.dir=d:\Users\lucas\Desktop\Arquivos\PA---Seres-vivos\PA5_IB_R
-os.name=Windows 10
-os.arch=amd64
-os.version=10.0
-derby.system.home=null
-Database Class Loader started - derby.database.classpath=''
-----------------------------------------------------------------
-Wed Jun 10 22:30:42 BRT 2020:
-Shutting down instance f9f140e7-0172-a0fb-54fe-00000f34d200 on database directory D:\Users\lucas\Desktop\Arquivos\PA---Seres-vivos\PA5_IB_R\dbprojeto with class loader sun.misc.Launcher$AppClassLoader@764c12b6 
-Wed Jun 10 22:30:43 BRT 2020 Thread[Thread-85,5,main] Cleanup action starting
-ERROR XBM0I: Directory dbprojeto cannot be removed.
-	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.iapi.services.monitor.Monitor.removePersistentService(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection$6.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.apache.derby.impl.jdbc.EmbedConnection.removePersistentService(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-Cleanup action completed
-Wed Jun 10 22:30:43 BRT 2020 Thread[Thread-85,5,main] Cleanup action starting
-ERROR XBM0I: Directory dbprojeto cannot be removed.
-	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.iapi.services.monitor.Monitor.removePersistentService(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection$6.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.apache.derby.impl.jdbc.EmbedConnection.removePersistentService(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-Cleanup action completed
-----------------------------------------------------------------
-Wed Jun 10 22:30:44 BRT 2020:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance 61228105-0172-a0fb-54fe-00000f34d200 
-on database directory D:\Users\lucas\Desktop\Arquivos\PA---Seres-vivos\PA5_IB_R\dbprojeto with class loader sun.misc.Launcher$AppClassLoader@764c12b6 
-Loaded from file:/C:/Users/lucas/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
-java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_231-b11
-user.dir=d:\Users\lucas\Desktop\Arquivos\PA---Seres-vivos\PA5_IB_R
-os.name=Windows 10
-os.arch=amd64
-os.version=10.0
-derby.system.home=null
-Database Class Loader started - derby.database.classpath=''
-----------------------------------------------------------------
-Wed Jun 10 22:33:35 BRT 2020:
-Shutting down instance 61228105-0172-a0fb-54fe-00000f34d200 on database directory D:\Users\lucas\Desktop\Arquivos\PA---Seres-vivos\PA5_IB_R\dbprojeto with class loader sun.misc.Launcher$AppClassLoader@764c12b6 
-Wed Jun 10 22:33:35 BRT 2020 Thread[Thread-101,5,main] Cleanup action starting
-ERROR XBM0I: Directory dbprojeto cannot be removed.
-	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.iapi.services.monitor.Monitor.removePersistentService(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection$6.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.apache.derby.impl.jdbc.EmbedConnection.removePersistentService(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-Cleanup action completed
-Wed Jun 10 22:33:35 BRT 2020 Thread[Thread-101,5,main] Cleanup action starting
-ERROR XBM0I: Directory dbprojeto cannot be removed.
-	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
-	at org.apache.derby.iapi.services.monitor.Monitor.removePersistentService(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection$6.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.apache.derby.impl.jdbc.EmbedConnection.removePersistentService(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver$LoginCallable.call(Unknown Source)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-Cleanup action completed
-----------------------------------------------------------------
-Wed Jun 10 22:33:37 BRT 2020:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance 6e788135-0172-a0fb-54fe-00000f34d200 
-on database directory D:\Users\lucas\Desktop\Arquivos\PA---Seres-vivos\PA5_IB_R\dbprojeto with class loader sun.misc.Launcher$AppClassLoader@764c12b6 
-Loaded from file:/C:/Users/lucas/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
-java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_231-b11
-user.dir=d:\Users\lucas\Desktop\Arquivos\PA---Seres-vivos\PA5_IB_R
+java.runtime.version=1.8.0_221-b11
+user.dir=c:\Users\foste\Desktop\paa\PA---Seres-vivos\PA5_IB_R
 os.name=Windows 10
 os.arch=amd64
 os.version=10.0
